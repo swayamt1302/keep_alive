@@ -1,0 +1,5 @@
+cron:
+  - name: keep-insearch-alive
+    schedule: "*/5 * * * *"   # every 5 minutes
+    command: curl -s https://www.insearchoutdoors.com > /dev/null
+    description: "Ping insearchoutdoors.com every 5 minutes to keep it alive"
